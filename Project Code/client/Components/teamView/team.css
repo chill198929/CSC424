@@ -1,0 +1,32 @@
+.wrapper {
+  display: flex;
+}
+
+.box {
+  display: flex;
+  /* Use box-sizing so that element's outerwidth will match width property */
+  box-sizing: border-box;
+  /* Allow box to grow and shrink, and ensure they are all equally sized */
+  flex: 1 1 auto;
+  overflow-y: hidden;
+}
+
+.handler {
+  width: 20px;
+  padding: 0;
+  cursor: ew-resize;
+  flex: 0 0 auto;
+}
+
+.handler:active {
+  cursor: grab;
+}
+
+.handler::before {
+  content: "";
+  display: block;
+  width: 4px;
+  height: 100%;
+  background: gray;
+  margin: 0 auto;
+}

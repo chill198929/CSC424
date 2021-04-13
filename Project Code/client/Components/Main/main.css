@@ -1,0 +1,123 @@
+body {
+  min-width: 98vw;
+  max-width: 98vw;
+  min-height: 98vh;
+  max-height: 98vh;
+  overflow: hidden;
+  background-color: #e0fbfc;
+}
+
+*:focus {
+  outline: none;
+}
+
+/* Style the header */
+.header {
+  grid-area: header;
+  background-color: white;
+  padding: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-width: 2px;
+  background-color: whitesmoke;
+}
+
+.header input[type="text"] {
+  background-color: white;
+  border: none;
+  outline: none;
+  font-size: 17px;
+  width: 90vw;
+}
+
+/* The grid container */
+.grid-container {
+  display: grid;
+  grid-row-gap: 10px;
+  grid-template-areas:
+    "header header header header header header header header header header"
+    "left main-content main-content main-content main-content main-content main-content main-content main-content main-content";
+  grid-column-gap: 10px;
+  height: auto;
+}
+
+/* Style the left column */
+.NavBar {
+  height: 97vh;
+  max-height: 97vh;
+  grid-area: left;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-width: 2px;
+  background-color: #98c1d9;
+  min-width: 12vw;
+  max-width: 12vw;
+}
+
+/* Style the main-content class */
+.main-content {
+  grid-area: main-content;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-width: 2px;
+  background-color: #95d5b2;
+  text-align: left;
+  display: flex;
+  height: 97vh;
+  max-height: 97vh;
+  max-width: 86vw;
+  min-width: 86vw;
+  position: relative;
+  z-index: 1;
+}
+
+.accordion {
+  background-color: #98c1d9;
+  color: #444;
+  cursor: pointer;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  border-color: #98c1d9;
+  transition: 0.4s;
+  font-size: large;
+  font-weight: bold;
+  border-bottom-style: ridge;
+}
+
+.accordion > button {
+  min-width: 12vw;
+  max-width: 12vw;
+}
+
+.accordion:after {
+  content: "+";
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "-";
+}
+
+.panel {
+  padding: 0 10px;
+  background-color: #4281a38d;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+  .grid-container {
+    grid-template-areas:
+      "header header header header header header header header header header"
+      "left main-content main-content main-content main-content main-content main-content main-content main-content main-content ";
+  }
+
+  #col3 {
+    visibility: hidden;
+  }
+}

@@ -1,0 +1,143 @@
+.column-container {
+  display: flex;
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.column {
+  width: 250px;
+  min-width: 250px;
+  height: 88vh;
+  padding: 1%;
+  margin: 1%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: #b7e4c7;
+  float: left;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.columnNameInput {
+  font-size: 20px;
+  background-color: #b7e4c7;
+  margin: 0 auto;
+  border: none;
+  justify-content: center;
+  text-align: center;
+}
+
+.columnNameInput:focus {
+  background-color: white;
+}
+
+.hideme {
+  visibility: hidden;
+}
+
+.columnNameInput:focus + .hideme {
+  visibility: visible;
+}
+
+.tasktitle {
+  border-style: none;
+  font-size: 15px;
+  font-weight: bold;
+  float: center;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  outline: none;
+  background-color: #b7e4c7;
+  display: block;
+  color: black;
+}
+
+#addcol {
+  background-color: #b7e4c7;
+  border-style: none;
+  content: "\002B";
+  font-size: 72px;
+  margin: 0%;
+}
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: black;
+  opacity: 1; /* Firefox */
+}
+
+.taskcard {
+  width: 95%;
+  min-width: 95%;
+  height: 20vh;
+  padding: 1%;
+  margin: 1%;
+  float: center;
+  background-color: #6eac82;
+  border-radius: 5px;
+  /*draggable css*/
+  cursor: move;
+  position: relative;
+}
+
+.taskcard > h5 {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-align: right;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.cardtasktitle {
+  float: left;
+  display: flex;
+  justify-content: space-between;
+  padding: 3%;
+}
+
+.cardnametitle {
+  float: left;
+  display: flex;
+  justify-content: space-between;
+  padding: 1%;
+}
+
+.cardassigntask {
+  float: left;
+  text-align: left;
+  padding: 5%;
+  margin: 1%;
+  width: 185px;
+  max-width: 185px;
+  height: auto;
+  background-color: #a1e2b6;
+}
+
+.startEnd {
+  margin-left: 1%;
+}
+
+.endInput {
+  width: 60px;
+  max-width: 60px;
+  margin: 2%;
+  background-color: #a1e2b6;
+}
+
+.startInput {
+  width: 60px;
+  max-width: 60px;
+  margin: 1%;
+  background-color: #a1e2b6;
+}
+
+.cardfirstlastname {
+  float: left;
+  text-align: left;
+  padding: 1%;
+  margin: 1%;
+  width: 180px;
+  min-width: 180px;
+  background-color: #a1e2b6;
+}

@@ -1,0 +1,64 @@
+.taskcard {
+  width: 238px;
+  min-width: 238px;
+  height: 20vh;
+  padding: 1%;
+  margin: 1%;
+  float: center;
+  background-color: #6eac82;
+  border-radius: 5px;
+  /*draggable css*/
+  cursor: move;
+}
+
+.cardtasktitle {
+  float: left;
+  display: flex;
+  justify-content: space-between;
+  padding: 3%;
+}
+
+.cardnametitle {
+  float: left;
+  display: flex;
+  justify-content: space-between;
+  padding: 1%;
+}
+
+.cardassigntask {
+  float: left;
+  text-align: left;
+  padding: 5%;
+  margin: 1%;
+  width: 185px;
+  max-width: 185px;
+  height: auto;
+  background-color: #a1e2b6;
+}
+.startEnd {
+  margin-left: 1%;
+}
+
+.endInput {
+  width: 60px;
+  max-width: 60px;
+  margin: 2%;
+  background-color: #a1e2b6;
+}
+
+.startInput {
+  width: 60px;
+  max-width: 60px;
+  margin: 1%;
+  background-color: #a1e2b6;
+}
+
+.cardfirstlastname {
+  float: left;
+  text-align: left;
+  padding: 1%;
+  margin: 1%;
+  width: 180px;
+  min-width: 180px;
+  background-color: #a1e2b6;
+}
